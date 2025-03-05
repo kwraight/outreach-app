@@ -1,0 +1,38 @@
+# base image
+# FROM kwraight/multitemplate-app:cern
+FROM registry.cern.ch/itk-streamlit/streamlit-base:multi
+
+# exposing default port for streamlit
+# EXPOSE 8501 # (already in base image)
+
+# set up pages
+USER root
+#COPY core/*.py ./core/
+RUN rm -rf ./userPages/theme*
+
+COPY commonCode/*.py ./commonCode/
+COPY dataVisApp/userPages/* ./userPages/dataVisApp/
+
+
+# set main
+COPY mainFiles/mainAppVis.py ./mainApp.py
+RUN sed -i 's/BUILDDATE/'$(date +%d-%m-%y)'/g' mainApp.py
+COPY requirements.txt ./requirements.txt
+# python packages
+RUN pip3 install -r requirements.txt
+
+# # temp files image
+RUN chown -R appuser:appuser /tmp
+RUN chmod 755 /tmp
+
+# # fudge for CERN image
+# RUN mkdir /.streamlit
+# COPY temp_id  /.streamlit/.stable_random_id
+# RUN chmod 777 /.streamlit/.stable_random_id
+
+# # run as not root
+# RUN adduser appuser
+USER appuser
+
+# match exposed port
+CMD ["streamlit", "run", "mainApp.py","--server.port=8501"]
