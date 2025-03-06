@@ -63,7 +63,7 @@ infoList=["### Instructions",
 
 class Page1(Page):
     def __init__(self):
-        super().__init__("DataViser", ":microscope: Data Visualisation Tester", infoList)
+        super().__init__("DataViser", "📊 Data Visualisation Tester", infoList)
 
     def main(self):
         super().main()
