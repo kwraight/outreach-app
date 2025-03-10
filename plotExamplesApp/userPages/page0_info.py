@@ -24,7 +24,8 @@ def DateFormat(dt):
 
 infoList=["## Plotting Example Pages",
         " 1. __Weather__: Graphs of weather information",
-        " 2. __Pies__: Pie charts"]
+        " 2. __Pies__: Pie charts",
+        " Examples based on based on [altair gallery](https://altair-viz.github.io/gallery/index.html)"]
 #####################
 ### main part
 #####################
