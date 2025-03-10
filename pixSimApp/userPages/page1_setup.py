@@ -86,7 +86,7 @@ class Page2(Page):
         # st.write("* tpx: timepix like mode (charge integrating)")
         #st.write('<style>div.row-widget.stRadio > div{flex-direction:row;}</style>', unsafe_allow_html=True)
         chipMode=st.radio("chip mode", ["mpx: medipix like mode (hit counting)","tpx: timepix like mode (charge integrating)"], index=0)
-        chipMode=chipMode[0:4]
+        chipMode=chipMode[0:3]
         ## set output name
         st.write("## Output name")
         try:
