@@ -22,7 +22,7 @@ COPY plotExamplesApp/userPages/* ./userPages/plotExamplesApp/
 
 
 # set main
-COPY mainFiles/mainAppVis.py ./mainApp.py
+COPY mainFiles/mainAppComb.py ./mainApp.py
 RUN sed -i 's/BUILDDATE/'$(date +%d-%m-%y)'/g' mainApp.py
 COPY requirements.txt ./requirements.txt
 # python packages
