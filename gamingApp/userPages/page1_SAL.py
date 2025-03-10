@@ -10,6 +10,7 @@ from random import seed, randint
 import ast
 import csv
 import copy
+import time
 ### PDB stuff
 import core.stInfrastructure as infra
 import commonCode.StreamlitTricks as stTrx
@@ -163,6 +164,8 @@ class Page1(Page):
                 print(moveLog[-1])
                 # print(moveLog[-1])
                 metric.append(moveLog[-1])
+                time.sleep(0.1)
+
 
             prog_txt.markdown("Playing complete!")
             pageDict['metric']=metric
