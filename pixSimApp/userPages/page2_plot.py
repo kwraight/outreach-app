@@ -78,7 +78,7 @@ class Page3(Page):
                 yTitle="Charge deposited"
             myPlot=alt.Chart(pixel_data).mark_line().encode(
                 x=alt.X('x', axis=alt.Axis(title="Arbitrary units")),
-                y=alt.Y('y', axis=alt.Axis(title=yTitle)),
+                y=alt.Y('y', axis=alt.Axis(title=yTitle), scale=alt.Scale(domain=[0, pixel_data['y'].max()*1.05])),
                 color=alt.Color('px:O', scale=alt.Scale(scheme='dark2'), legend=alt.Legend(title="Pixel"))
             ).interactive()
             ### mark pixel limits
