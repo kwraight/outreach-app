@@ -1,6 +1,6 @@
-# Data Visualisation webApp
+# Data Visualisation
 
-### [Streamlit](https://www.streamlit.io) (python**3**) data visualisation toy
+Pages with data visualisation based content.
 
 ---
 
