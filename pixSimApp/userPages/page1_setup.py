@@ -12,7 +12,7 @@ import datetime
 ### other
 # cwd = os.getcwd()
 # sys.path.insert(0, cwd+"/code")
-from .simCode.pixelSim import RunPixSim
+from simCode.pixelSim import RunPixSim
 
 #####################
 ### useful functions
