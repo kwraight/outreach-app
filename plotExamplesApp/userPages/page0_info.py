@@ -18,9 +18,9 @@ import commonCode.StreamlitTricks as stTrx
 ### useful functions
 #####################
 
-infoList=["## Plotting Pages",
+infoList=["## Plotting Example Pages",
         " 1. __Weather__: Graphs of weather information",
-        " 1. __Pies__: Pie charts"]
+        " 2. __Pies__: Pie charts"]
 #####################
 ### main part
 #####################
