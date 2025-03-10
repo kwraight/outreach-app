@@ -38,8 +38,6 @@ class Page1(Page):
         st.write(" --- ")
         ###
 
-        st.write("### Simple pixel detecter 1D simulation")
-
         [st.write(x) for x in infoList]
 
         # state.cwd=cwd
@@ -49,4 +47,4 @@ class Page1(Page):
             st.write(os.listdir())
 
         ##
-        st.write("### Happy Simulating")
+        st.write("### Happy Simulating 😀")

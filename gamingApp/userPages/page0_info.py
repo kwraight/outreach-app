@@ -18,6 +18,10 @@ import commonCode.StreamlitTricks as stTrx
 ### useful functions
 #####################
 
+### format datetime
+def DateFormat(dt):
+    return str("{0:02}-{1:02}-{2:04}".format(dt.day,dt.month,dt.year))+" at "+str("{0:02}:{1:02}".format(dt.hour,dt.minute))
+
 infoList=["## Gaming Pages",
         " 1. __🐍 & 🪜__: Snakes and Ladders games"]
 #####################
@@ -35,3 +39,12 @@ class Page0(Page):
         pageDict=st.session_state[self.name]
 
         [st.write(x) for x in infoList]
+
+        # state.cwd=cwd
+        if st.session_state.debug:
+            st.error("Debug is on")
+            st.write("Current directory:",cwd)
+            st.write(os.listdir())
+
+        ##
+        st.write("### Happy Gaming 😀")
