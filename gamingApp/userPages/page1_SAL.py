@@ -200,10 +200,11 @@ class Page1(Page):
                             tooltip=[col+':Q','count():Q']
                         ).properties(
                         title={
-                            'text':[f"{col} Distribution"],
+                            'text':[f"Distribution from {pageDict['game_num']} games"],
                             },           
                         width=600)
                 st.write(chart)
+                st.write(" - __Most Wins__:", df_metric[col].mode().values[0])
             
             else:
                 chart=alt.Chart(df_metric).mark_bar().encode(
@@ -212,7 +213,7 @@ class Page1(Page):
                             tooltip=[col+':Q','count():Q']
                         ).properties(
                         title={
-                            'text':[f"{col} Distribution"],
+                            'text':[f"Distribution from {pageDict['game_num']} games"],
                             },           
                         width=600)
                 st.write(chart)
