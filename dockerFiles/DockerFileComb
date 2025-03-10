@@ -12,9 +12,9 @@ RUN rm -rf ./userPages/theme*
 
 COPY commonCode/*.py ./commonCode/
 COPY dataVisApp/userPages/* ./userPages/dataVisApp/
-COPY dataVisApp/userPages/* ./userPages/pixSimApp/
-COPY dataVisApp/userPages/* ./userPages/gamingApp/
-COPY dataVisApp/userPages/* ./userPages/plotExamplesApp/
+COPY pixSimApp/userPages/* ./userPages/pixSimApp/
+COPY gamingApp/userPages/* ./userPages/gamingApp/
+COPY plotExamplesApp/userPages/* ./userPages/plotExamplesApp/
 
 
 # set main
