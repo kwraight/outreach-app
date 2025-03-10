@@ -14,9 +14,7 @@ COPY commonCode/*.py ./commonCode/
 
 COPY dataVisApp/userPages/* ./userPages/dataVisApp/
 
-# COPY pixSimApp/userPages/* ./userPages/pixSimApp/
-# RUN chown -R appuser:appuser ./userPages/pixSimApp/
-# RUN chmod 755 ./userPages/pixSimApp/
+COPY pixSimApp/userPages/* ./userPages/pixSimApp/
 
 COPY gamingApp/userPages/* ./userPages/gamingApp/
 
