@@ -1,3 +1,4 @@
 
 *.pyc
 .codegpt
+*__pycache__*
