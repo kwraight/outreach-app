@@ -45,7 +45,7 @@ class Page3(Page):
         if doWork:
             ## select results
             st.write("## Select data")
-            results=st.selectbox("select results by name", setDict['simResults'], index=0, format_func=lambda x: x['name'])
+            results=st.selectbox("Select results by name", setDict['simResults'], index=0, format_func=lambda x: x['name'])
 
             ## settings for selected dataset
             st.write("### Results")
